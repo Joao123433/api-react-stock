@@ -1,8 +1,10 @@
 const mongoose = require("mongoose")
+const dotenv = require("dotenv");
 
+dotenv.config();
 mongoose.Promise = global.Promise
 
-mongoose.connect("mongodb+srv://joaosantos123433:Feliznatal2024!@cluster01.ahojeyj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster01", 
+mongoose.connect(process.env.MONGODB_URI, 
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
