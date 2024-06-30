@@ -10,8 +10,8 @@ const app = express()
 app.use(express.json())
 app.use(cors());
 
-app.use("/category", categoryRouter)
-app.use("/item", ItemRouter)
+app.use("/api/category", categoryRouter)
+app.use("/api/item", ItemRouter)
 
 app.listen(3000, () => {
   console.log("Servidor iniciado")
